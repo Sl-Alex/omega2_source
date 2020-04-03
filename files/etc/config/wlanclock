@@ -1,0 +1,10 @@
+config application 'input'
+        # Device
+        option device '/dev/input/event1'
+        # Touchpad parameters
+        option threshold '30'
+        option swap_axes '0'
+        option invert_x '0'
+        option invert_y '0'
+        # Gesture timeout, ms
+        option timeout '50'
