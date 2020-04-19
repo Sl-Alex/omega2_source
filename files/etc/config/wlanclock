@@ -1,3 +1,11 @@
+config application 'app'
+        # Output device
+        option device '/dev/spidev0.1'
+        option dat_ncfg_gpio '1'
+        option fonts_dir '/usr/share/fonts/wlanclock/'
+        # List of fonts in fonts_dir
+        list fonts 'NanumGothic-ExtraBold.ttf'
+
 config application 'input'
         # Device
         option device '/dev/input/event1'
@@ -8,3 +16,23 @@ config application 'input'
         option invert_y '0'
         # Gesture timeout, ms
         option timeout '50'
+
+
+# Hours and minutes font/size/location
+config font 'HOURS_MINS'
+        # Font index in 'wlanclock.app.fonts' list
+        option index '0'
+        # Nominal char size
+        option size_h '23'
+        option size_v '34'
+        # Bottom/left position
+        option base_x '2'
+        option base_y '29'
+
+# Seconds
+config font 'SECONDS'
+        option index '0'
+        option size_h '15'
+        option size_v '24'
+        option base_x '110'
+        option base_y '29'
